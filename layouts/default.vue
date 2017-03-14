@@ -2,11 +2,13 @@
   <div>
     <nav-bar/>
     <nuxt/>
+    <site-footer></site-footer>
   </div>
 </template>
 
 <script>
 import NavBar from '~components/nav'
+import SiteFooter from '~components/footer'
 
 export default {
   head: {
