@@ -5,8 +5,10 @@
   "author": "Tomás Leiva <tomas.leivad@gmail.com>",
   "private": true,
   "dependencies": {
+    "axios": "^0.15.3",
     "express": "^4.15.2",
-    "nuxt": "latest"
+    "nuxt": "latest",
+    "vuex": "^2.2.1"
   },
   "scripts": {
     "dev": "node server.js",
@@ -23,6 +25,7 @@
     "eslint-loader": "^1.6.1",
     "eslint-plugin-html": "^2.0.0",
     "eslint-plugin-promise": "^3.4.1",
-    "eslint-plugin-standard": "^2.0.1"
+    "eslint-plugin-standard": "^2.0.1",
+    "jsdom": "^9.12.0"
   }
 }
