@@ -1,7 +1,7 @@
 const Nuxt = require('nuxt')
 const app = require('express')()
 const host = process.env.HOST || '0.0.0.0'
-const port = process.env.PORT || 3000
+const port = process.env.PORT || 8080
 
 app.set('port', port)
 
@@ -22,15 +22,11 @@ app.use(nuxt.render)
 // Build only in dev mode
 if (config.dev) {
   nuxt.build()
-    .catch((error) => {
-      console.error(error) // eslint-disable-line no-console
-      process.exit(1)
-    })
+  .catch((error) => {
+    console.error(error) // eslint-disable-line no-console
+    process.exit(1)
+  })
 }
-/* nuxt.renderAndGetWindow('http://localhost:3000')
-  .then((window) => {
-    console.log(window.document.body)
-  }) */
 
 // Development error handler
 if (app.get('env') === 'development') {
